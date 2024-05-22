@@ -1,0 +1,142 @@
+
+body {
+    background-color: #F6F6F6;
+    background-image: radial-gradient(circle, #D9D9D9 1px, transparent 0);
+    background-size: 20px 20px;
+    text-align: center;
+}
+
+.card {
+    width: 60%;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 24px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: #FFF7E9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-image-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative; /* Added for absolute positioning of the heading */
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 100px;
+    border-radius: 12px;
+    opacity: calc(0.3);
+}
+
+.container-heading {
+    position: absolute; /* Positioned absolutely within the container */
+    top: 50%; /* Centered vertically */
+    left: 50%; /* Centered horizontally */
+    transform: translate(-50%, -50%); /* Centering adjustment */
+    font-size: 3em;
+    margin: 0;
+    color: white; /* Text color to stand out against the image */
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+.info-container {
+    width: 100%;
+    text-align: right; 
+    padding: 20px;
+}
+
+.container-description {
+    margin-bottom: 10px;
+}
+
+.container-rating {
+    margin-bottom: 10px;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 23px;
+    max-width: 500px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.dots-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Styles for dollar symbols */
+.bold-dollar {
+    font-weight: bold;
+    color: black;
+}
+
+.grey-dollar {
+    font-weight: bold;
+    color: grey;
+}
+
+.price-display {
+    display: flex;
+    gap: 2px;
+}

@@ -1,0 +1,77 @@
+/* Top.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50; 
+    padding: 5px 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 30px;
+  }
+  
+  .top-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .top-nav ul li {
+    margin-left: 20px;
+  }
+  
+  .top-nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1; /* צבע אפור בהיר */
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s, border-radius 0.3s;
+  }
+  
+  .top-nav ul li a:hover {
+    background-color: #e74c3c; /* צבע אדום כתום */
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .top-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .top-nav ul {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .top-nav ul li {
+      margin-left: 0;
+    }
+  
+    .top-nav ul li a {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  

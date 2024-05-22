@@ -1,0 +1,52 @@
+.manage-restaurants {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #FFF7E9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-container {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #7b3636ab;
+  border-radius: 8px;
+  background-color: #FFF7E9;
+}
+
+.restaurant-container input,
+.restaurant-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.restaurant-container textarea {
+  resize: vertical;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.button-group button:last-child {
+  background-color: #dc3545;
+}
+
