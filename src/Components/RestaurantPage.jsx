@@ -79,7 +79,7 @@ const RestaurantPage = () => {
     return <div dangerouslySetInnerHTML={{ __html: dollarSymbols }} />;
   };
 
-  // אם הפריטים נטענים מציג הודעה שנטען
+
   if (!restaurant) return <div className="container">טוען...</div>;
 
   return (
