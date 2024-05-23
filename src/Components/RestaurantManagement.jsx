@@ -34,7 +34,7 @@ const RestaurantManagement = () => {
 
   // פונקציה למחיקת מסעדה מהרשימה ושמירת השינויים ב-localStorage
   const deleteRestaurant = (id) => {
-    const updatedRestaurants = restaurants.filter((restaurant) => restaurant.id !== id);
+    const updatedRestaurants = restaurants.filter((restaurant) => restaurant.id !== id);//יצירת מערך מסעדות מעודכן אחרי המחיקה
     const updatedTemporaryRestaurants = temporaryRestaurants.filter((restaurant) => restaurant.id !== id);
     setRestaurants(updatedRestaurants);
     setTemporaryRestaurants(updatedTemporaryRestaurants);

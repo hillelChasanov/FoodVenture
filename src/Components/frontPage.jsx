@@ -11,9 +11,9 @@ const FrontPage = () => {
     //לקיחת המידע על המסעדות מהlocal  או לקיחה מה db 
     useEffect(() => {
         let storedRestaurants = JSON.parse(localStorage.getItem('restaurants'));
-        if (!storedRestaurants || storedRestaurants.length === 0) {
-            storedRestaurants = Restaurants;
-            localStorage.setItem('restaurants', JSON.stringify(storedRestaurants));
+        if (!storedRestaurants || storedRestaurants.length === 0) {//בדיקה אם אין מסעדות מאוחסנות ב-localStorage.
+            storedRestaurants = Restaurants;//לקיחה מהdata base
+            localStorage.setItem('restaurants', JSON.stringify(storedRestaurants));//ושמירה של המסעדות ב- local
         }
         setFilteredRestaurants(storedRestaurants);
     }, []);
@@ -22,9 +22,11 @@ const FrontPage = () => {
     const handleSearch = (searchTerm) => {
         setSearchTerm(searchTerm);
         const storedRestaurants = JSON.parse(localStorage.getItem('restaurants')) || [];
+        //אם המחרוזת חיפוש ריקה הוא מציג בדף את כול המסעדוץ
         if (searchTerm === '') {
             setFilteredRestaurants(storedRestaurants);
         } else {
+            //סינון המסעדות לפי החיפוש
             const filtered = storedRestaurants.filter(restaurant =>
                 restaurant.city.toLowerCase().startsWith(searchTerm.toLowerCase())
             );
