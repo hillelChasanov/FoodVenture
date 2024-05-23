@@ -15,8 +15,9 @@ const AddRestaurantPage = () => {
     const [foodType, setFoodType] = useState('');
     const navigate = useNavigate();
 
-    // פונקציה שבודקת שהמשתמש מילא את כול השדות ואם לא לא מאפשרת לו להתקדם
+
     const handleAddRestaurant = () => {
+            // פונקציה שבודקת שהמשתמש מילא את כול השדות ואם לא לא מאפשרת לו להתקדם
         if (!name || !description || !rating || !mainImage || !price || !city || !foodType || additionalImages.length < 3) {
             alert('נא למלא את כל השדות הנדרשים ולהכניס שלוש תמונות נוספות.');
             return;
