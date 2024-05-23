@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Restaurants from './Database'; 
+import Restaurants from '../db/Database.jsx'; 
 import '../Style/frontPage.css';
 import Input from './input';
 

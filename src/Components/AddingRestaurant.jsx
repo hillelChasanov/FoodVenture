@@ -15,6 +15,7 @@ const AddRestaurantPage = () => {
     const [foodType, setFoodType] = useState('');
     const navigate = useNavigate();
 
+    // פונקציה שבודקת שהמשתמש מילא את כול השדות ואם לא לא מאפשרת לו להתקדם
     const handleAddRestaurant = () => {
         if (!name || !description || !rating || !mainImage || !price || !city || !foodType || additionalImages.length < 3) {
             alert('נא למלא את כל השדות הנדרשים ולהכניס שלוש תמונות נוספות.');
@@ -35,8 +36,8 @@ const AddRestaurantPage = () => {
 
         // אחסון המסעדה החדשה שהכנסנו בlocalStorage
         const storedRestaurants = JSON.parse(localStorage.getItem('restaurants')) || [];
-        storedRestaurants.push(newRestaurant);
-        localStorage.setItem('restaurants', JSON.stringify(storedRestaurants));
+        storedRestaurants.push(newRestaurant);//הוספת המסעדה למערך
+        localStorage.setItem('restaurants', JSON.stringify(storedRestaurants));//שמירת המערך המעודכן ב local
 
         navigate('/');
     };
@@ -83,6 +84,7 @@ const AddRestaurantPage = () => {
                     <input type="text" placeholder="תמונה ראשית" value={mainImage} onChange={(e) => setMainImage(e.target.value)} />
                 </div>
                 <div className="form-group">
+                    {/* יצירת מערך להוספת הקטע של הדפס תמונות  */}
                     {additionalImages.map((image, index) => (
                         <div key={index} className="additional-image-group">
                             <input
